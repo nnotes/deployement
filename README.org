@@ -10,7 +10,7 @@
 
 ** Context
 
-   - Version: 1.0.0
+   - Version: 0.0.0
 
    - Contribution policy: [[http://rfc.zeromq.org/spec:22][C4.1]]
 
