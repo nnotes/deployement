@@ -1,0 +1,65 @@
+# STORY-TEMPLATE-VERSION: 4.3.0
+
+* Deployment
+
+  - NNotes _expects_ that running the plateform locally means that it will run
+    identically in distant servers _so that_ deployment overhead is minimized to
+    making the platform run locally only.
+
+
+
+** Context
+
+   - Version: 1.0.0
+
+   - Contribution policy: [[http://rfc.zeromq.org/spec:22][C4.1]]
+
+   - Project style guide: [[https://github.com/nomosyn/resources][Coding style]]
+
+   - short name: deploy
+
+   - abbreviation: deploy
+
+   - Licensed under: https://www.mozilla.org/MPL/2.0/
+
+   - Contributors:
+       - Full name: Pierre-Henry Fröhring, contact: frohring.pierrehenry@gmail.com
+
+
+
+*** Definitions
+
+    - <<gfxmonk>>: [[http://gfxmonk.net/2015/01/03/nixos-and-stateless-deployment.html][Stateless deployments]]
+
+
+
+** Init State
+
+   - Manual verification and deployements:
+       - Once locally
+       - Once on a distant server
+
+
+
+** Problem
+
+   - Meteor is a moving target => local and distant server deployements
+     dependencies out of synch "often"
+
+   - Distributed developpement => deploying plateform means synch all parallel
+     project states into one cohesive plateform => monolitic deployed state
+     built from distributed state out of synch "quickly" => need to track
+     dependencies => horrible to do it manually
+
+
+
+** End State
+
+   - Deployed plaform state built from distributed state which are tracked.
+     Based on this [[gfxmonk][use case]].
+       - => no "under the hood" change
+
+       - => rollback when necessary
+
+       - => local deployment means identical distant deployment
+
